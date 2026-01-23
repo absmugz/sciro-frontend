@@ -36,7 +36,7 @@ export default function Page() {
           </div>
         </div>
         {/* Main hero content */}
-        <div className="relative max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-stretch gap-12">
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-stretch gap-12">
           {/* Left: Description and buttons */}
           <div className="flex-1 flex flex-col justify-center gap-6">
             <div>
@@ -52,17 +52,17 @@ export default function Page() {
                   Private beta — early design partners welcome
                 </span>
               </div>
-              <div className="flex gap-4 mt-2">
-                {/* 5. CTA copy */}
+              {/* Responsive buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full">
                 <a
                   href="#"
-                  className="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-6 py-3 rounded-lg shadow transition"
+                  className="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-6 py-3 rounded-lg shadow transition w-full sm:w-auto text-center"
                 >
                   Watch the 90-second demo
                 </a>
                 <a
                   href="#"
-                  className="bg-white/10 hover:bg-white/20 text-indigo-200 font-semibold px-6 py-3 rounded-lg border border-white/10 transition"
+                  className="bg-white/10 hover:bg-white/20 text-indigo-200 font-semibold px-6 py-3 rounded-lg border border-white/10 transition w-full sm:w-auto text-center"
                 >
                   View the SDK
                 </a>
@@ -70,14 +70,14 @@ export default function Page() {
             </div>
           </div>
           {/* Right: Demo/Event stream */}
-          <div className="flex-1 flex justify-center items-center">
+          <div className="flex-1 flex justify-center items-center mt-8 md:mt-0">
             <DemoMock />
           </div>
         </div>
       </section>
 
       {/* Features */}
-      <section className="max-w-5xl mx-auto px-6 py-16 flex flex-col gap-10">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 py-16 flex flex-col gap-10">
         <div className="flex flex-col md:flex-row gap-6 justify-center">
           <FeatureCard
             title="Real-time learner state"
@@ -127,7 +127,7 @@ export default function Page() {
       </section>
 
       {/* How it works */}
-      <section className="max-w-5xl mx-auto px-6 py-12">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 py-12">
         <h2 className="text-2xl font-bold text-white mb-8 text-center">How it works</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           <HowItWorksStep n={1} title="Event Signals" desc="Capture behavior events (pause, rewind, retries, time-to-answer)" />
@@ -138,13 +138,21 @@ export default function Page() {
       </section>
 
       {/* SDK Example */}
-      <section className="max-w-5xl mx-auto px-6 py-12">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 py-12">
         <h2 className="text-2xl font-bold text-white mb-6">SDK Example</h2>
-        <CodeBlock />
+        <div className="w-full">
+          <div className="rounded-xl bg-white/5 border border-white/10">
+            <div className="w-full max-w-full overflow-x-auto">
+              <div className="min-w-[300px] max-w-full">
+                <CodeBlock />
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Why now / Who it's for */}
-      <section className="max-w-5xl mx-auto px-6 py-12 flex flex-col md:flex-row gap-10">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 py-12 flex flex-col md:flex-row gap-10">
         <div className="flex-1">
           <h3 className="text-xl font-semibold text-white mb-2">Why now</h3>
           {/* 2. Sharpened "Why now" copy */}
