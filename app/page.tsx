@@ -27,6 +27,9 @@ export default function Page() {
             <h1 className="text-3xl md:text-5xl font-extrabold text-white leading-tight max-w-xl">
               Know when learners struggle — <span className="text-indigo-400">before they do.</span>
             </h1>
+            <p className="text-base md:text-lg text-indigo-200 font-semibold">
+              Sciro is an SDK that plugs into any learning app.
+            </p>
             <p className="text-lg md:text-xl text-gray-300 max-w-lg">
               Sciro embeds inside learning apps to detect confusion, fatigue, and drop-off risk in real time, then triggers the right intervention instantly.
             </p>
