@@ -22,33 +22,44 @@ export default function Page() {
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[60vw] h-[60vw] bg-indigo-600/20 blur-3xl rounded-full" />
         </div>
-        <div className="relative max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
-          <div className="flex-1 flex flex-col items-start gap-6">
-            <h1 className="text-3xl md:text-5xl font-extrabold text-white leading-tight max-w-xl">
-              Know when learners struggle — <span className="text-indigo-400">before they do.</span>
-            </h1>
-            <p className="text-base md:text-lg text-indigo-200 font-semibold">
-              Sciro is an SDK that plugs into any learning app.
-            </p>
-            <p className="text-lg md:text-xl text-gray-300 max-w-lg">
-              Sciro embeds inside learning apps to detect confusion, fatigue, and drop-off risk in real time, then triggers the right intervention instantly.
-            </p>
-            <div className="flex gap-4 mt-2">
-              <a
-                href="#"
-                className="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-6 py-3 rounded-lg shadow transition"
-              >
-                Watch the Demo
-              </a>
-              <a
-                href="#"
-                className="bg-white/10 hover:bg-white/20 text-indigo-200 font-semibold px-6 py-3 rounded-lg border border-white/10 transition"
-              >
-                Read the SDK Docs
-              </a>
+        {/* Headline and subheading */}
+        <div className="w-full flex flex-col items-center mb-12 px-6">
+          <h1 className="text-3xl md:text-5xl font-extrabold text-white leading-tight text-center mb-2">
+            Know when learners struggle — <span className="text-indigo-400">and act before they fail.</span>
+          </h1>
+          <div className="text-lg md:text-2xl text-indigo-200 font-semibold text-center">
+            Learning intelligence, embedded.
+          </div>
+        </div>
+        {/* Main hero content */}
+        <div className="relative max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-stretch gap-12">
+          {/* Left: Description and buttons */}
+          <div className="flex-1 flex flex-col justify-center gap-6">
+            <div>
+              <p className="text-base md:text-lg text-indigo-200 font-semibold mb-2">
+                Sciro is an SDK that plugs into any learning app.
+              </p>
+              <p className="text-lg md:text-xl text-gray-300 max-w-lg mb-4">
+                Sciro embeds inside learning apps to detect confusion, fatigue, and drop-off risk in real time, then triggers the right intervention instantly.
+              </p>
+              <div className="flex gap-4 mt-2">
+                <a
+                  href="#"
+                  className="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-6 py-3 rounded-lg shadow transition"
+                >
+                  Watch the Demo
+                </a>
+                <a
+                  href="#"
+                  className="bg-white/10 hover:bg-white/20 text-indigo-200 font-semibold px-6 py-3 rounded-lg border border-white/10 transition"
+                >
+                  Read the SDK Docs
+                </a>
+              </div>
             </div>
           </div>
-          <div className="flex-1 flex justify-center w-full">
+          {/* Right: Demo/Event stream */}
+          <div className="flex-1 flex justify-center items-center">
             <DemoMock />
           </div>
         </div>
