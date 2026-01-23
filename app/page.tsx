@@ -30,6 +30,10 @@ export default function Page() {
           <div className="text-lg md:text-2xl text-indigo-200 font-semibold text-center">
             Learning intelligence, embedded.
           </div>
+          {/* 1. Clarifying line under subheadline */}
+          <div className="text-base text-gray-400 font-medium text-center mt-2">
+            Sciro is an SDK for edtech and training platforms.
+          </div>
         </div>
         {/* Main hero content */}
         <div className="relative max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-stretch gap-12">
@@ -42,18 +46,25 @@ export default function Page() {
               <p className="text-lg md:text-xl text-gray-300 max-w-lg mb-4">
                 Sciro embeds inside learning apps to detect confusion, fatigue, and drop-off risk in real time, then triggers the right intervention instantly.
               </p>
+              {/* 4. Micro status badge */}
+              <div className="mb-3">
+                <span className="inline-block bg-indigo-900/60 text-indigo-200 text-xs font-semibold px-3 py-1 rounded-full">
+                  Private beta — early design partners welcome
+                </span>
+              </div>
               <div className="flex gap-4 mt-2">
+                {/* 5. CTA copy */}
                 <a
                   href="#"
                   className="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-6 py-3 rounded-lg shadow transition"
                 >
-                  Watch the Demo
+                  Watch the 90-second demo
                 </a>
                 <a
                   href="#"
                   className="bg-white/10 hover:bg-white/20 text-indigo-200 font-semibold px-6 py-3 rounded-lg border border-white/10 transition"
                 >
-                  Read the SDK Docs
+                  View the SDK
                 </a>
               </div>
             </div>
@@ -88,6 +99,20 @@ export default function Page() {
               </svg>
             }
           />
+          {/* 3. Trust/constraint line under On-device + offline */}
+          <div className="flex flex-col">
+            <FeatureCard
+              title="On-device + offline"
+              desc="Fast, private inference that works in low-connectivity environments."
+              icon={
+                <svg width="32" height="32" fill="none" viewBox="0 0 32 32">
+                  <rect x="7" y="7" width="18" height="18" rx="4" stroke="#38bdf8" strokeWidth="2" fill="#0ea5e9" fillOpacity="0.08"/>
+                  <circle cx="16" cy="22" r="1.5" fill="#38bdf8"/>
+                </svg>
+              }
+            />
+            <span className="text-xs text-gray-500 mt-2 ml-1">No cameras. No microphones. Behavior signals only.</span>
+          </div>
           <FeatureCard
             title="Intervention hooks"
             desc="Return suggested actions like show_example, hint_mode, slow_down, take_break."
@@ -122,8 +147,9 @@ export default function Page() {
       <section className="max-w-5xl mx-auto px-6 py-12 flex flex-col md:flex-row gap-10">
         <div className="flex-1">
           <h3 className="text-xl font-semibold text-white mb-2">Why now</h3>
+          {/* 2. Sharpened "Why now" copy */}
           <p className="text-gray-400 text-base">
-            AI can now understand learning signals in real time. Sciro brings this intelligence to every learning app, unlocking new outcomes for learners and organizations.
+            Recent advances in on-device inference and behavioral modeling make real-time learning intelligence possible for the first time.
           </p>
         </div>
         <div className="flex-1">
