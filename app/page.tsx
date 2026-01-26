@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import DemoMock from "../components/DemoMock";
 import FeatureCard from "../components/FeatureCard";
@@ -6,13 +7,14 @@ import CodeBlock from "../components/CodeBlock";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 
-export const metadata = {
-  title: "Sciro.ai — Learning intelligence, embedded.",
-  description:
-    "Know when learners struggle — before they do. Sciro embeds inside learning apps to detect confusion, fatigue, and drop-off risk in real time, then triggers the right intervention instantly.",
-};
+import DemoModal from "../components/DemoModal";
+import { useState } from "react";
+
 
 export default function Page() {
+  const [modalOpen, setModalOpen] = useState(false);
+  const demoVideoUrl = "/demo.mp4"; // Place your demo video in public/demo.mp4
+
   return (
     <div className="bg-[#0b0e13] min-h-screen flex flex-col">
       <Navigation />
@@ -54,12 +56,13 @@ export default function Page() {
               </div>
               {/* Responsive buttons */}
               <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full">
-                <a
-                  href="#"
+                <button
+                  type="button"
                   className="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-6 py-3 rounded-lg shadow transition w-full sm:w-auto text-center"
+                  onClick={() => setModalOpen(true)}
                 >
                   Watch the 90-second demo
-                </a>
+                </button>
                 <a
                   href="#"
                   className="bg-white/10 hover:bg-white/20 text-indigo-200 font-semibold px-6 py-3 rounded-lg border border-white/10 transition w-full sm:w-auto text-center"
@@ -74,6 +77,7 @@ export default function Page() {
             <DemoMock />
           </div>
         </div>
+        <DemoModal open={modalOpen} onClose={() => setModalOpen(false)} videoUrl={demoVideoUrl} />
       </section>
 
       {/* Features */}
