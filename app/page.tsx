@@ -64,11 +64,13 @@ export default function Page() {
                   Watch the 90-second demo
                 </button>
                 <a
-                  href="#"
-                  className="bg-white/10 hover:bg-white/20 text-indigo-200 font-semibold px-6 py-3 rounded-lg border border-white/10 transition w-full sm:w-auto text-center"
-                >
-                  View the SDK
-                </a>
+  href="https://github.com/absmugz/sciro-sdk"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-white/10 hover:bg-white/20 text-indigo-200 font-semibold px-6 py-3 rounded-lg border border-white/10 transition w-full sm:w-auto text-center"
+>
+  View the SDK
+</a>
               </div>
             </div>
           </div>
